@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="message-container">
+    <% @messages.reverse_each do |message| %>
+    <div class="message animated fadeIn">
+      <p class="content"><%= message.content %></p>
+      <p class="time"><%= message.created_at %></p>
+    </div>
+    <% end %>
+  </div>
+  <%= form_for(@message) do |f| %>
+    <div class="input-text">
+      <div class="text-field"><p><%= f.text_area :content, :class => 'p text-field', :placeholder => "What's bothering you?" %></p></div>
+      <div class="btn-submit" type="submit"><h1><%= f.submit "Submit", :class => 'btn-submit' %></h1></div>
+    </div>
+  </div>
+  <% end %>
+</div>
