@@ -2,9 +2,24 @@
   //height: 300px
   //position: relative
   //overflow: visible
-
+  .msg-head
+    text-align: center
+    padding-top: 25px
+    width: 100%
+    z-index: 100
+    background: #ecf0f1
+    position: fixed
+    top: 0
+    line-height: 50px
+    font:
+      size: 50px
+      weight: 800
+    letter-spacing: .2em
+    text-transform: uppercase
+    color: #2c3e50
   .message-container
     padding: 50px
+    margin-top: 100px
     margin-bottom: 125px
 
     //.message, .content, .time
@@ -13,6 +28,7 @@
     .content
       margin-bottom: 0px
       overflow-wrap: break-word
+      //text-align: justify
 
     .message
       margin-bottom: 50px
@@ -27,7 +43,7 @@
         weight: 400
 
   .input-text
-    background: #e7e7e7
+    background: #ecf0f1
     position: fixed
     bottom: 0
     width: 100%
@@ -70,7 +86,7 @@
 
       @media (max-width: 600px)
         display: block
-        min-width: 600px
+        min-width: 100%
         bottom: 0
         right: auto
         //float: left
