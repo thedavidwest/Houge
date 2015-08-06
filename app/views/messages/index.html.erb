@@ -3,6 +3,7 @@
     <% @messages.reverse_each do |message| %>
     <div class="message animated fadeIn">
       <p class="content"><%= message.content %></p>
+      <p class="time"><%= message.timestamp %></p>
     </div>
     <% end %>
   </div>
