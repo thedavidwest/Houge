@@ -12,6 +12,7 @@
 
     .content
       margin-bottom: 0px
+      overflow-wrap: break-word
 
     .message
       margin-bottom: 50px
@@ -32,7 +33,6 @@
     width: 100%
     height: 125px
     @media (max-width: 600px)
-      position: relative
       display: block
 
     .text-field
@@ -48,11 +48,12 @@
         color: #fafafa
         font-size: 50px
         font-style: italic
-      @media (max-width: 600px)
-        
+
 
     .btn-submit
-      float: right
+      position: absolute
+      border-radius: 0px
+      right: 0
       min-width: 300px
       height: 100%
       text-align: center
@@ -69,5 +70,7 @@
 
       @media (max-width: 600px)
         display: block
-        width: 600px
-        float: left
+        min-width: 600px
+        bottom: 0
+        right: auto
+        //float: left
