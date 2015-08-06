@@ -3,7 +3,7 @@
     <% @messages.reverse_each do |message| %>
     <div class="message animated fadeIn">
       <p class="content"><%= message.content %></p>
-      <p class="time"><%= message.timestamp %></p>
+      <p class="time"><%= message.created_at.strftime("%a, %B %d, %I:%M %p") %></p>
     </div>
     <% end %>
   </div>

@@ -1,8 +1,8 @@
 class Message < ActiveRecord::Base
-  before_save :timestamp
+  before_save :created_at
 
   def timestamp
-    timestamp_field = Time.now.strftime("%a, %B %d, %I:%M %p")
+    created_at_field = strftime("%a, %B %d, %I:%M %p")
   end
   def change
   end
