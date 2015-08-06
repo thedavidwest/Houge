@@ -1,3 +1,6 @@
+<% flash.each do |name, msg| %>
+  <%= content_tag(:div, msg, class: "alert alert-#{name}")%>
+<% end %>
 <%= form_for(@message) do |f| %>
 <div class="overlay">
   <div class="modal">
@@ -5,10 +8,19 @@
       <h1 class="lead">What's wrong</br>today, Houge?</h1>
       <p>If you were Houge, what would be bothering you today?</p>
     </div>
+    <% if user_signed_in? %>
     <div class="i-text">
       <div class="t-field"><p><%= f.text_area :content, :class => 'p t-field', :placeholder => "What's bothering you?" %></p></div>
       <div><h1><%= f.submit "Submit", :class => 'b-submit' %></h1></div>
     </div>
+    <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+    <% else %>
+    <p>
+      <%= link_to "Log In", new_user_session_path, class: "su-btn-reverse" %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "su-btn" %>
+    <p>
+    <% end %>
+
   </div>
 </div>
 <% end %>

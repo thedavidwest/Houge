@@ -1,12 +1,16 @@
 <div class="container">
   <div class="msg-head">
     <h1>Houge Thoughts</h1>
+    <% if user_signed_in? %>
+      <p class="leave"><%= link_to "Log Out", destroy_user_session_path, method: :delete %></p>
+    <% end %>
   </div>
   <div class="message-container">
     <% @messages.reverse_each do |message| %>
     <div class="message animated fadeIn">
       <p class="content"><%= message.content %></p>
       <p class="time"><%= message.created_at.strftime("%a, %B %d, %I:%M %p") %></p>
+      <%= message.user.email if message.user %>
     </div>
     <% end %>
   </div>

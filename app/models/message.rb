@@ -1,4 +1,5 @@
 class Message < ActiveRecord::Base
+  belongs_to :user
   before_save :created_at
 
   def timestamp

@@ -1,3 +1,15 @@
+.alert
+  +outer-container(50%)
+  +center-text
+  background: transparentize(#2c3e50, .3)
+  border-radius: 5px
+  border: 1px solid #2c3e50
+  color: white
+  margin-top: 20px
+  padding: 15px 0
+  z-index: 1000
+  position: relative
+
 .overlay
   position: fixed
   top: 0
@@ -11,13 +23,15 @@
 
   .modal
     border-radius: 5px
-    max-width: 750px
+    width: 750px
     height: auto
     background: white
     box-shadow: 0 0 1em rgba(0, 0, 0, .5)
     text-align: center
     padding: 25px 0px 25px 0px
     position: relative
+    @media (max-width: 700px)
+      max-width: 600px
 
     .lead
       text-transform: uppercase
@@ -29,6 +43,8 @@
     p
       color: #000
       font-style: italic
+      @media (max-width: 700px)
+        font-size: 15px
 
     .i-text
       width: 90%
