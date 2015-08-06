@@ -1,5 +1,4 @@
 .container
-  width: 100vw
   height: 300px
   position: relative
   overflow: visible
@@ -7,8 +6,6 @@
   .message-container
     padding: 50px
     margin-bottom: 125px
-    max-width: 100vw
-    white-space
 
     .message, .content, .time
       text-transform: uppercase
@@ -18,7 +15,6 @@
       font-size: 24px
       &:last-child
         margin-bottom: 0px
-
 
     .time
       font:
@@ -30,22 +26,18 @@
     background: #e7e7e7
     position: fixed
     bottom: 0
-    width: 100vw
+    width: 100%
     height: 125px
 
     .text-field
-      position: relative
       float: left
       height: 125px
-      max-width: 1000px
       background: transparent
-      overflow: auto
       border: none
       resize: none
       box-shadow: none
       white-space: nowrap
       p
-        width: 100%
         padding-left: 25px
         color: #fafafa
         font-size: 50px
@@ -62,7 +54,6 @@
       background: #e74c3c
       color: white
       transition: .5s ease
-      border: none
       &:hover
         background: darken(#e74c3c, 25%)
       &:focus
