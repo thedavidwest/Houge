@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :messages
   devise_for :users
   root 'pages#index'
-  get '/messages' => 'messages#index'
+  get 'messages' => 'messages#index'
   post 'messages' => 'messages#create'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

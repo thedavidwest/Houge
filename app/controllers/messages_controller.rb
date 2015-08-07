@@ -25,7 +25,7 @@ end
 
   def correct_user
     @message = current_user.messages.find_by(id: params[:id])
-    redirect_to messages_path, notice: "Unable to locate page." if @pins.nil?
+    redirect_to messages_path, notice: "Unable to locate page." if @message.nil?
   end
   def message_params
     params.require(:message).permit(:content)
