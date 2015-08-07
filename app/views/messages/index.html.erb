@@ -16,7 +16,7 @@
   </div>
   <%= form_for(@message) do |f| %>
     <div class="input-text">
-      <div class="text-field"><p><%= f.text_area :content, :class => 'p text-field', :placeholder => "What's bothering you?", :rows => '2', :cols => '36' %></p></div>
+      <div class="text-field" required="required"><p><%= f.text_area :content, required: true, :class => 'p text-field', :placeholder => "What's bothering you?", :rows => '2', :cols => '36' %></p></div>
       <div class="btn-submit" type="submit"><h1><%= f.submit "Submit", :class => 'btn-submit' %></h1></div>
     </div>
   </div>
