@@ -14,8 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-$(function() {
-  $('.b-submit').click(function(){
-    $('.overlay').hide();
-  });
-});
