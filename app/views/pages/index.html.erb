@@ -10,7 +10,7 @@
     </div>
     <% if user_signed_in? %>
     <div class="i-text">
-      <div class="t-field"><p><%= f.text_area :content, required: true, :class => 'p t-field', :placeholder => "What's bothering you?" %></p></div>
+      <div class="t-field" required="required"><p><%= f.text_area :content, required: true, :class => 'p t-field', :placeholder => "What's bothering you?" %></p></div>
       <div><h1><%= f.submit "Submit", :class => 'b-submit' %></h1></div>
       <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
     </div>
