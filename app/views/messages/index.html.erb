@@ -9,8 +9,14 @@
     <% @messages.reverse_each do |message| %>
     <div class="message animated fadeIn">
       <p class="content"><%= message.content %></p>
-      <p class="time"><%= message.created_at.strftime("%a, %B %d, %I:%M %p") %></p>
-      <%= message.user.email if message.user %>
+      <div class="m-info">
+        <p class="user-name">by <%= message.user.username if message.user %> |</p>
+        <p class="time"><%= message.created_at.strftime("%a, %B %d, %I:%M %p") %></p>
+        <% if message.user == current_user %>
+            <p class="m-edit"><%= link_to '', edit_message_path(message) %></p>
+            <p class="m-delete"><%= link_to '✖', message, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <% end %>
+      </div>  
     </div>
     <% end %>
   </div>
