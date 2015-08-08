@@ -15,8 +15,9 @@
         <% if message.user == current_user %>
             <p class="m-edit"><%= link_to '', edit_message_path(message) %></p>
             <p class="m-delete"><%= link_to '✖', message, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            <p class="m-edituser"><%= link_to "Edit User", edit_user_registration_path %></p>
         <% end %>
-      </div>  
+      </div>
     </div>
     <% end %>
   </div>
