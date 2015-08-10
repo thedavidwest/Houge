@@ -19,7 +19,6 @@ class MessagesController < ApplicationController
     else
       render 'new'
   end
-
   def update
     respond_to do |format|
       if @message.update(message_params)
